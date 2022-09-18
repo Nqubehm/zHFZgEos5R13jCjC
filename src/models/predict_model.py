@@ -61,9 +61,6 @@ grid_cv = GridSearchCV(estimator=dec_model,
 print(grid_cv.best_params_)
 
 # Re-training decisionTree classifier since it's the one that performed the best initially
-dec_model_2 = DecisionTreeClassifier(criterion='entropy', max_depth=None,
-                                     max_features=0.6, splitter='best')
-dec_model_2.fit(x_train_smote, y_train_smote)
 
 # Accuracy
 print('DecisionTree Classifier Test Score is: ', dec_model_2.score(x_test, y_test))
